@@ -1,11 +1,6 @@
 package com.moeiny.reza.vehicleregisteration.data.vehiclerepository
 
-import android.app.Application
-import android.os.AsyncTask
 import com.moeiny.reza.vehicleregisteration.core.result.Result
-import com.moeiny.reza.vehicleregisteration.data.database.AppDatabase
-import com.moeiny.reza.vehicleregisteration.data.database.dao.VehicleDao
-import com.moeiny.reza.vehicleregisteration.data.database.entitiy.VehicleEntity
 import com.moeiny.reza.vehicleregisteration.data.model.apimodel.VehiclesInfoModel
 import com.moeiny.reza.vehicleregisteration.data.retrofit.ApiService
 import retrofit2.Call
