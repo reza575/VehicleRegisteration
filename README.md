@@ -13,7 +13,6 @@ This project is done in Kotlin with respectful to Clean Architecture
 
 Kotlin
 
-![Main Screen](https://github.com/reza575/OptusTest/blob/master/screenshots/OptusTest.png)
 ![Main Screen](https://github.com/reza575/VehicleRegisteration/blob/master/screenshots/NSWServices.png)
 
 
