@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Vehicle Registeration</string>
+    <string name="unknown_error">Unknown error</string>
+
+</resources>
