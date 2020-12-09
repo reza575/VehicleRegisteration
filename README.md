@@ -11,10 +11,10 @@ This project is done in Kotlin with respectful to Clean Architecture
 
 ### Prerequisites
 
-Java,Kotlin
+Kotlin
 
 
-![Main Screen](https://github.com/reza575/VehicleRegisteration/blob/master/screenshots/NswServices.png)
+![Main Screen](https://github.com/reza575/VehicleRegisteration/blob/master/screenshots/NSWServices.png)
 
 
 
