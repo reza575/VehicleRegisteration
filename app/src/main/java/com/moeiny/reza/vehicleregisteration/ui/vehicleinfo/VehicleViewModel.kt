@@ -25,7 +25,9 @@ class VehicleViewModel(private val vehicleRepository: VehiclesRepository) : View
         vehicleRepository.fetchVehiclesInfo { result ->
             if (result is Result.Success) {
 
-                //Map News Data from API model to UI Model
+                /**
+                 * Map Vehicle Data from API model to UI Model
+                 */
                 val vehicleList = result.data.registrations.map { vehicle ->
                     ShowVehicleModel(
                         plateNumber = vehicle.plateNumber.orEmpty(),

@@ -30,7 +30,9 @@ class DetailsViewModel(private val vehicleRepository: VehiclesRepository) : View
                     val selectedList =
                         result.data.registrations.filter { it.plateNumber == plateNumber }
 
-                    //Map News Data from API model to UI Model
+                    /**
+                     * Map Vehicle info from API model to UI Model
+                     */
                     val registeration = selectedList.map { vehicle ->
                         ShowDetailsModel(
                             plateNumber = vehicle.plateNumber.orEmpty(),
@@ -73,6 +75,7 @@ class DetailsViewModel(private val vehicleRepository: VehiclesRepository) : View
             return ""
         }
     }
+
     /**
      * validateMonth function: calculate the period of validity for vehicles by consider of expiry date
      */

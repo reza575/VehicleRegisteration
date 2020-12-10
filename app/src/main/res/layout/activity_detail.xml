@@ -7,408 +7,414 @@
     <data>
         <variable
             name="vehicle"
-            type="com.moeiny.reza.vehicleregisteration.data.model.uimodel.ShowDetailsModel"/>
+            type="com.moeiny.reza.vehicleregisteration.data.model.uimodel.ShowDetailsModel" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:padding="@dimen/hor_margin">
 
-    <RelativeLayout
-        android:id="@+id/rl_plate"
-        android:background="@drawable/shapeitems_yellow"
-        android:textAlignment="center"
-        android:layout_margin="@dimen/hor_margin"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-    <TextView
-        android:id="@+id/txt_plate"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Plate Number : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txt_platenum"
-        android:layout_toRightOf="@id/txt_plate"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.plateNumber}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_type"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_plate">
-
-        <TextView
-            android:id="@+id/txt_type"
-            android:layout_margin="@dimen/hor_margin"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Type : "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/txt_typevalue"
-            android:layout_toRightOf="@id/txt_type"
-            android:layout_margin="@dimen/hor_margin"
-            android:textSize="16sp"
-            android:text="@{vehicle.type}"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_make"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_type">
-
-    <TextView
-        android:id="@+id/txt_make"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Make : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txt_makevalue"
-        android:layout_toRightOf="@id/txt_make"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.make}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_model"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_make">
-
-    <TextView
-        android:id="@+id/txt_model"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Model : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txt_modelvalue"
-        android:layout_toRightOf="@id/txt_model"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.model}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_color"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_model"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/txt_color"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Colour : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/hor_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txt_colorvalue"
-        android:layout_toRightOf="@id/txt_color"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.colour}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_plate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_yellow"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_plate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Plate Number : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_vin"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_color">
+                <TextView
+                    android:id="@+id/txt_platenum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_plate"
+                    android:text="@{vehicle.plateNumber}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_vin"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Vin : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_vinvalue"
-        android:layout_toRightOf="@id/txt_vin"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.vin}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_plate">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Type : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_tareweight"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_vin">
+                <TextView
+                    android:id="@+id/txt_typevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_type"
+                    android:text="@{vehicle.type}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_tareweight"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Tare_Weight : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_tareweightvalue"
-        android:layout_toRightOf="@id/txt_tareweight"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.tareWeight}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_type">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_make"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Make : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_grossmass"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_tareweight">
+                <TextView
+                    android:id="@+id/txt_makevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_make"
+                    android:text="@{vehicle.make}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_grossmass"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="GrossMass : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_grossmassvalue"
-        android:layout_toRightOf="@id/txt_grossmass"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.grossMass}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_make">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Model : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_expire"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_grossmass">
+                <TextView
+                    android:id="@+id/txt_modelvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_model"
+                    android:text="@{vehicle.model}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_expire"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Expire Status :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_expirevalue"
-        android:layout_toRightOf="@id/txt_expire"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.expiryStatus}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_model">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Colour : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_expiredate"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_expire">
+                <TextView
+                    android:id="@+id/txt_colorvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_color"
+                    android:text="@{vehicle.colour}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_expiredate"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Expiry Date : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_expiredatevalue"
-        android:layout_toRightOf="@id/txt_expiredate"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.expiryDate}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_vin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_color">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_vin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Vin : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_validmonth"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_expiredate">
+                <TextView
+                    android:id="@+id/txt_vinvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_vin"
+                    android:text="@{vehicle.vin}"
+                    android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txt_validmonth"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Validation Priod : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_validmonthvalue"
-        android:layout_toRightOf="@id/txt_validmonth"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.validmonth}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/rl_tareweight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_vin">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/txt_tareweight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Tare_Weight : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <RelativeLayout
-        android:id="@+id/rl_insurename"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_validmonth">
+                <TextView
+                    android:id="@+id/txt_tareweightvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_tareweight"
+                    android:text="@{vehicle.tareWeight}"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_grossmass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_tareweight">
+
+                <TextView
+                    android:id="@+id/txt_grossmass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="GrossMass : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_grossmassvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_grossmass"
+                    android:text="@{vehicle.grossMass}"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_grossmass">
+
+                <TextView
+                    android:id="@+id/txt_expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Expire Status :"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_expirevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_expire"
+                    android:text="@{vehicle.expiryStatus}"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expiredate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_expire">
+
+                <TextView
+                    android:id="@+id/txt_expiredate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Expiry Date : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_expiredatevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_expiredate"
+                    android:text="@{vehicle.expiryDate}"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_validmonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_expiredate">
+
+                <TextView
+                    android:id="@+id/txt_validmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Validation Priod : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_validmonthvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_validmonth"
+                    android:text="@{vehicle.validmonth}"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_insurename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_validmonth">
 
 
-    <TextView
-        android:id="@+id/txt_insurername"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Insurer Name : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_insurername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Insurer Name : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_insurernamevalue"
-        android:layout_toRightOf="@id/txt_insurername"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.insurerName}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_insurernamevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_insurername"
+                    android:text="@{vehicle.insurerName}"
+                    android:textSize="16sp" />
 
-    </RelativeLayout>
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl_insurercode"
-        android:background="@drawable/shapeitems_gray"
-        android:layout_margin="@dimen/hor_margin"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_insurename">
+            <RelativeLayout
+                android:id="@+id/rl_insurercode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/hor_margin"
+                android:background="@drawable/shapeitems_gray"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_insurename">
 
-    <TextView
-        android:id="@+id/txt_insurercode"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Insurer Code : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_insurercode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:text="Insurer Code : "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_insurercodevalue"
-        android:layout_toRightOf="@id/txt_insurercode"
-        android:layout_margin="@dimen/hor_margin"
-        android:textSize="16sp"
-        android:text="@{vehicle.insurerCode}"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txt_insurercodevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/hor_margin"
+                    android:layout_toRightOf="@id/txt_insurercode"
+                    android:text="@{vehicle.insurerCode}"
+                    android:textSize="16sp" />
 
-    </RelativeLayout>
+            </RelativeLayout>
 
- </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </layout>
 

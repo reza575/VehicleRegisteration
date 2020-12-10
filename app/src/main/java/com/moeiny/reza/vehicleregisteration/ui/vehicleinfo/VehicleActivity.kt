@@ -27,10 +27,13 @@ class VehicleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-         //function setUpVies: Assign parameters and values
+        /**
+         * function setUpVies: Assign parameters and values
+         */
         setUpViews()
-
-        //SetUp all the livedata parameters to start their job(Observing data)
+        /**
+         * SetUp all the livedata parameters to start their job(Observing data)
+         */
         setupLiveData()
     }
 

@@ -20,15 +20,26 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //assigning views and parrameters
+        /**
+         * assigning views and parrameters
+         */
         setupView()
-        //Receive the PlateNumber of vehicles that selected on recyclerview
+        /**
+         *Receive the PlateNumber of vehicles that selected on recyclerview
+         */
+
         var platenumber = intent.extras?.getString(PLATE_NUMBER)
         if (!platenumber.isNullOrEmpty()) {
-            //fine the vehicles with the selected plateNumber in the list
+            /**
+             * fine the vehicles with the selected plateNumber in the list
+             */
+
             viewModel.getSelectedItem(platenumber)
         }
-        //SetUp all the livedata parameters to start their job(Observing data)
+        /**
+         * SetUp all the livedata parameters to start their job(Observing data)
+         */
+
         setupLiveData()
     }
 

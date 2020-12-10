@@ -1,6 +1,5 @@
 package com.moeiny.reza.vehicleregisteration.core
 
-import android.webkit.WebView
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
